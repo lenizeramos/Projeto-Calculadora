@@ -12,10 +12,44 @@
         <h1>Calculadora</h1>
     </header>
     <main>
-        
+        <table>
+            <tr>
+                <td colspan="4" id="resultado"></td>
+            </tr>
+            <tr>
+                <td onclick="clicarTecla('7')">7</td>
+                <td onclick="clicarTecla('8')">8</td>
+                <td onclick="clicarTecla('9')">9</td>
+                <td onclick="clicarTecla('+')" id="mais" class="operadores">+</td>
+            </tr>
+            <tr>
+                <td onclick="clicarTecla('4')">4</td>
+                <td onclick="clicarTecla('5')">5</td>
+                <td onclick="clicarTecla('6')">6</td>
+                <td onclick="clicarTecla('-')"  id="menos" class="operadores">-</td>
+            </tr>
+            
+            <tr>
+                <td onclick="clicarTecla('1')">1</td>
+                <td onclick="clicarTecla('2')">2</td>
+                <td onclick="clicarTecla('3')">3</td>
+                <td onclick="clicarTecla('*')"  id="multiplicar" class="operadores">*</td>
+            </tr>
+            <tr>
+                <td onclick="clicarTecla('.')">.</td>
+                <td onclick="clicarTecla('0')">0</td>
+                <td onclick="limpar()">C</td>
+                <td onclick="clicarTecla('/')"  id="dividir" class="operadores">/</td>
+            </tr>
+            <tr>
+                <td colspan="4" id="igual" onclick="calcular()">=</td>
+            </tr>
+        </table>
+        <p id="debug">
+
+        </p>
     </main>
     <footer>
-
     </footer>
     <script src="script.js"></script>
 </body>

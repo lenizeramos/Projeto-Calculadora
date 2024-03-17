@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+
+
+
+table {
+    width: 400px;
+    height: 400px;
+    border-collapse: separate;
+}
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+td:hover {
+    background-color: #110333;
+    color: white;
+}
+
+td#resultado {
+    background-color: white;
+    color: black;
+    height: 100px;
+    font-size: 2em;
+    text-align: right;
+}
+
+td.operadores {
+    background-color: #A8A5AF;
+    color: white;
+}
+
+td.operadores:hover {
+    background-color: #110333;
+    color: white;
+}
+
+td#igual {
+    background-color: #746D80;
+    color: white;
+}
+
+td#igual:hover {
+     background-color: #110333;
+    color: white;
+}

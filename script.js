@@ -3,10 +3,9 @@ var resultado = window.document.querySelector("td#resultado")
 var debug = window.document.querySelector("p#debug")
 var primeiroNumero = ""
 var segundoNumero = ""
-var numeroAtual = ""
 var operador = ""
 var isOperador = false
-var limparTela = false
+var limpaTela = false
 
 function isValid(tecla) {
     if (primeiroNumero == "" && isOperador) {
@@ -21,7 +20,7 @@ function isValid(tecla) {
 }
 
 function clicarTecla(teclaClicada) {
-    if (limparTela) {
+    if (limpaTela) {
         limpar()
     }
 
@@ -34,7 +33,6 @@ function clicarTecla(teclaClicada) {
                 resultado.innerHTML += teclaClicada
             } else {
                 resultado.innerHTML = resultado.innerHTML.replace(operador, teclaClicada)
-
             }
 
             operador = teclaClicada
@@ -42,19 +40,16 @@ function clicarTecla(teclaClicada) {
         } else {
             resultado.innerHTML += teclaClicada
 
-            if (operador == "" && !isOperador) {
+            if (operador == "") {
                 primeiroNumero += teclaClicada
             }
 
-            if (operador != "" && !isOperador) {
+            if (operador != "") {
                 segundoNumero += teclaClicada
             }
-
         }
     }
-
-    debugar()
-
+    //debugar()
 }
 
 function limpar() {
@@ -63,10 +58,9 @@ function limpar() {
     segundoNumero = ""
     operador = ""
     isOperador = false
-    limparTela = false
-    debugar()
+    limpaTela = false
+    //debugar()
 }
-
 
 function calcular() {
     resultadoCalculo = 0
@@ -75,7 +69,7 @@ function calcular() {
     }
 
     if (segundoNumero != "") {
-        limparTela = true
+        limpaTela = true
         switch (operador) {
             case "+":
                 resultadoCalculo = Number(primeiroNumero) + Number(segundoNumero)
